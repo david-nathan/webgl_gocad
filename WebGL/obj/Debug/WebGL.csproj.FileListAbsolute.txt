@@ -1,0 +1,5 @@
+c:\users\michael\documents\visual studio 2013\Projects\WebGL\WebGL\bin\WebGL.dll.config
+c:\users\michael\documents\visual studio 2013\Projects\WebGL\WebGL\bin\WebGL.dll
+c:\users\michael\documents\visual studio 2013\Projects\WebGL\WebGL\bin\WebGL.pdb
+c:\users\michael\documents\visual studio 2013\Projects\WebGL\WebGL\obj\Debug\WebGL.dll
+c:\users\michael\documents\visual studio 2013\Projects\WebGL\WebGL\obj\Debug\WebGL.pdb

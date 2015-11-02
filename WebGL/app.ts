@@ -1,0 +1,1 @@
+﻿//This file is necessary for the TypeScriptCompile Build Action to be available.
