@@ -1,6 +1,0 @@
-C:\Users\Michael\Documents\Web\Projects\webgl_gocad\WebGL\bin\WebGL.dll.config
-C:\Users\Michael\Documents\Web\Projects\webgl_gocad\WebGL\bin\WebGL.dll
-C:\Users\Michael\Documents\Web\Projects\webgl_gocad\WebGL\bin\WebGL.pdb
-C:\Users\Michael\Documents\Web\Projects\webgl_gocad\WebGL\obj\Debug\WebGL.csprojResolveAssemblyReference.cache
-C:\Users\Michael\Documents\Web\Projects\webgl_gocad\WebGL\obj\Debug\WebGL.dll
-C:\Users\Michael\Documents\Web\Projects\webgl_gocad\WebGL\obj\Debug\WebGL.pdb
