@@ -3,3 +3,6 @@ c:\users\michael\documents\visual studio 2013\Projects\WebGL\WebGL\bin\WebGL.dll
 c:\users\michael\documents\visual studio 2013\Projects\WebGL\WebGL\bin\WebGL.pdb
 c:\users\michael\documents\visual studio 2013\Projects\WebGL\WebGL\obj\Debug\WebGL.dll
 c:\users\michael\documents\visual studio 2013\Projects\WebGL\WebGL\obj\Debug\WebGL.pdb
+C:\Users\David\Documents\Developer\webgl_gocad\WebGL\obj\Debug\WebGL.csprojResolveAssemblyReference.cache
+C:\Users\David\Documents\Developer\webgl_gocad\WebGL\obj\Debug\WebGL.dll
+C:\Users\David\Documents\Developer\webgl_gocad\WebGL\obj\Debug\WebGL.pdb

@@ -1,2 +1,5 @@
-{"views":[
-]}
+{
+    "views": [
+        {"name": "WebGL Canvas", "url": "app/views/webgl.html"}
+    ]
+}
