@@ -84,6 +84,7 @@
     <None Include="include\jquery\jquery-2.1.1.intellisense.js" />
     <Content Include="include\jquery\jquery-2.1.1.js" />
     <Content Include="include\jquery\jquery-2.1.1.min.js" />
+    <Content Include="include\threejs\three.js" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
     <Content Include="settings\views.json" />
@@ -122,6 +123,25 @@
     <TypeScriptCompile Include="include\typings\d3\d3.d.ts" />
     <TypeScriptCompile Include="include\typings\d3\plugins\d3.superformula.d.ts" />
     <TypeScriptCompile Include="include\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\detector.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-canvasrenderer.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-copyshader.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-css3drenderer.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-editorcontrols.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-effectcomposer.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-maskpass.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-orbitcontrols.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-projector.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-renderpass.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-shaderpass.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-trackballcontrols.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-transformcontrols.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-vrcontrols.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three-vreffect.d.ts" />
+    <TypeScriptCompile Include="include\typings\threejs\three.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\components\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -2,95 +2,109 @@
 
 angular.module("webglApp")
     .controller("canvasCtrl", ["$scope", function ($scope) {
+        // global variables
+        var renderer;
+        var scene;
+        var camera;
 
-        "use strict";
+        /**
+     * Initializes the scene, camera and objects. Called when the window is
+     * loaded by using window.onload (see below)
+     */
+        function init() {
+            var windowWidth = $(".panel").width();
+            var windowHeight = screen.availHeight - 400;
 
-        window.onload = main;
+            // create a scene, that will hold all our elements such as objects, cameras and lights.
+            scene = new THREE.Scene();
 
-        function main() {
-            var image = new Image();
-            image.src = "images/leaves.jpg";  // MUST BE SAME DOMAIN!!!
-            image.onload = function () {
-                render(image);
-            }
-        }
+            // create a camera, which defines where we're looking at.
+            camera = new THREE.PerspectiveCamera(45, windowWidth / windowHeight, 0.1, 1000);
 
-        function render(image) {
-            // Get A WebGL context
+            // create a render, sets the background color and the size
+            renderer = new THREE.WebGLRenderer();
+            renderer.setClearColor(0x000000, 1.0);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.shadowMapEnabled = true;
+
+            // create the ground plane
+            var planeGeometry = new THREE.PlaneGeometry(20, 20);
+            var planeMaterial = new THREE.MeshLambertMaterial({ color: 0xcccccc });
+            var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+            plane.receiveShadow = true;
+
+            // rotate and position the plane
+            plane.rotation.x = -0.5 * Math.PI;
+            plane.position.x = 0;
+            plane.position.y = -2;
+            plane.position.z = 0;
+
+            // add the plane to the scene
+            scene.add(plane);
+
+            // create a cube
+            var cubeGeometry = new THREE.BoxGeometry(6, 4, 6);
+            var cubeMaterial = new THREE.MeshLambertMaterial({ color: 0xff0000 });
+            var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
+
+            cube.castShadow = true;
+
+            // add the cube to the scene
+            scene.add(cube);
+
+            // position and point the camera to the center of the scene
+            camera.position.x = 15;
+            camera.position.y = 16;
+            camera.position.z = 13;
+            camera.lookAt(scene.position);
+
+            // add spotlight for the shadows
+            var spotLight = new THREE.SpotLight(0xffffff);
+            spotLight.position.set(10, 20, 20);
+            spotLight.shadowCameraNear = 20;
+            spotLight.shadowCameraFar = 50;
+            spotLight.castShadow = true;
+
+            scene.add(spotLight);
+
             var canvas = document.getElementById("canvas");
-            var gl = getWebGLContext(canvas);
-            if (!gl) {
-                return;
-            }
+            // add the output of the renderer to the html element
+            canvas.appendChild(renderer.domElement);
 
-            // setup GLSL program
-            var program = createProgramFromScripts(gl, ["2d-vertex-shader", "2d-fragment-shader"]);
-            gl.useProgram(program);
-
-            // look up where the vertex data needs to go.
-            var positionLocation = gl.getAttribLocation(program, "a_position");
-            var texCoordLocation = gl.getAttribLocation(program, "a_texCoord");
-
-            // provide texture coordinates for the rectangle.
-            var texCoordBuffer = gl.createBuffer();
-            gl.bindBuffer(gl.ARRAY_BUFFER, texCoordBuffer);
-            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-                0.0, 0.0,
-                1.0, 0.0,
-                0.0, 1.0,
-                0.0, 1.0,
-                1.0, 0.0,
-                1.0, 1.0]), gl.STATIC_DRAW);
-            gl.enableVertexAttribArray(texCoordLocation);
-            gl.vertexAttribPointer(texCoordLocation, 2, gl.FLOAT, false, 0, 0);
-
-            // Create a texture.
-            var texture = gl.createTexture();
-            gl.bindTexture(gl.TEXTURE_2D, texture);
-
-            // Set the parameters so we can render any size image.
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
-
-            // Upload the image into the texture.
-            gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
-
-            // lookup uniforms
-            var resolutionLocation = gl.getUniformLocation(program, "u_resolution");
-
-            // set the resolution
-            gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
-
-            // Create a buffer for the position of the rectangle corners.
-            var buffer = gl.createBuffer();
-            gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-            gl.enableVertexAttribArray(positionLocation);
-            gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
-
-            // Set a rectangle the same size as the image.
-            setRectangle(gl, 0, 0, image.width, image.height);
-
-            // Draw the rectangle.
-            gl.drawArrays(gl.TRIANGLES, 0, 6);
+            // call the render function, after the first render, interval is determined
+            // by requestAnimationFrame
+            render();
         }
 
-        function randomInt(range) {
-            return Math.floor(Math.random() * range);
+        /**
+         * Called when the scene needs to be rendered. Delegates to requestAnimationFrame
+         * for future renders
+         */
+        function render() {
+            // render using requestAnimationFrame
+            requestAnimationFrame(render);
+            renderer.render(scene, camera);
         }
 
-        function setRectangle(gl, x, y, width, height) {
-            var x1 = x;
-            var x2 = x + width;
-            var y1 = y;
-            var y2 = y + height;
-            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-                x1, y1,
-                x2, y1,
-                x1, y2,
-                x1, y2,
-                x2, y1,
-                x2, y2]), gl.STATIC_DRAW);
-        }     
+
+        /**
+         * Function handles the resize event. This make sure the camera and the renderer
+         * are updated at the correct moment.
+         */
+        function handleResize() {
+            var windowWidth = $(".panel").width();
+            var windowHeight = screen.availHeight - 400;
+
+            camera.aspect = windowWidth / windowHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(windowWidth, windowHeight);
+        }
+
+        
+        // calls the handleResize function when the window is resized
+        window.addEventListener('resize', handleResize, false);
+
+        // calls the init function when the window is done loading.
+        init();
+                           
     }]);
