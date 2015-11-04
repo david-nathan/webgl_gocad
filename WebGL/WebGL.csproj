@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="app\components\directives\webglcanvas\webglcanvas_template.html" />
     <Content Include="app\css\app.css" />
     <Content Include="app\views\home.html" />
     <Content Include="app\views\webgl.html" />
@@ -108,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="app\components\directives\webglcanvas\webglcanvas.ts" />
     <TypeScriptCompile Include="app\controllers\canvasCtrl.ts" />
     <TypeScriptCompile Include="app\controllers\webglApp.ts" />
     <TypeScriptCompile Include="app\_references.ts" />
@@ -141,7 +143,7 @@
     <TypeScriptCompile Include="include\typings\threejs\three.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\components\" />
+    <Folder Include="app\components\services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
