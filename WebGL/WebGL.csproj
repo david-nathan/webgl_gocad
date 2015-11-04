@@ -77,6 +77,7 @@
     <Content Include="include\bootstrap\js\bootstrap.js" />
     <Content Include="include\bootstrap\js\bootstrap.min.js" />
     <Content Include="include\bootstrap\js\npm.js" />
+    <Content Include="include\chroma\chroma.min.js" />
     <Content Include="include\d3\d3.v3.js" />
     <Content Include="data\tas_dev_gran.gp" />
     <Content Include="data\tas_seis_interp.gp" />
@@ -85,6 +86,8 @@
     <None Include="include\jquery\jquery-2.1.1.intellisense.js" />
     <Content Include="include\jquery\jquery-2.1.1.js" />
     <Content Include="include\jquery\jquery-2.1.1.min.js" />
+    <Content Include="include\datgui\dat.gui.min.js" />
+    <Content Include="include\stats\stats.min.js" />
     <Content Include="include\threejs\three.js" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
@@ -122,9 +125,12 @@
     <TypeScriptCompile Include="include\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="include\typings\angularjs\angular-scenario.d.ts" />
     <TypeScriptCompile Include="include\typings\angularjs\angular.d.ts" />
+    <TypeScriptCompile Include="include\typings\chroma\chroma-js.d.ts" />
     <TypeScriptCompile Include="include\typings\d3\d3.d.ts" />
     <TypeScriptCompile Include="include\typings\d3\plugins\d3.superformula.d.ts" />
+    <TypeScriptCompile Include="include\typings\datgui\dat-gui.d.ts" />
     <TypeScriptCompile Include="include\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="include\typings\stats\stats.d.ts" />
     <TypeScriptCompile Include="include\typings\threejs\detector.d.ts" />
     <TypeScriptCompile Include="include\typings\threejs\three-canvasrenderer.d.ts" />
     <TypeScriptCompile Include="include\typings\threejs\three-copyshader.d.ts" />
@@ -143,6 +149,7 @@
     <TypeScriptCompile Include="include\typings\threejs\three.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\components\directives\terraincanvas\" />
     <Folder Include="app\components\services\" />
   </ItemGroup>
   <PropertyGroup>
