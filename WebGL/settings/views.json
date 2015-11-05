@@ -1,5 +1,6 @@
 {
     "views": [
-        {"name": "WebGL Canvas", "url": "app/views/webgl.html"}
+        {"name": "WebGL Canvas", "url": "app/views/webgl.html"},
+		{"name": "Terrain",      "url": "app/views/terrain.html"}
     ]
 }

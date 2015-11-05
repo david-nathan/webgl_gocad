@@ -60,9 +60,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="app\components\directives\terraincanvas\terraincanvas_template.html" />
     <Content Include="app\components\directives\webglcanvas\webglcanvas_template.html" />
     <Content Include="app\css\app.css" />
     <Content Include="app\views\home.html" />
+    <Content Include="app\views\terrain.html" />
     <Content Include="app\views\webgl.html" />
     <Content Include="data\tas_dev_gran.xml" />
     <Content Include="data\tas_seis_interp.xml" />
@@ -112,8 +114,10 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="app\components\directives\terraincanvas\terraincanvas.ts" />
     <TypeScriptCompile Include="app\components\directives\webglcanvas\webglcanvas.ts" />
     <TypeScriptCompile Include="app\controllers\canvasCtrl.ts" />
+    <TypeScriptCompile Include="app\controllers\terrainCtrl.ts" />
     <TypeScriptCompile Include="app\controllers\webglApp.ts" />
     <TypeScriptCompile Include="app\_references.ts" />
     <TypeScriptCompile Include="include\typings\angular-ui-bootstrap\angular-ui-bootstrap.d.ts" />
@@ -149,7 +153,6 @@
     <TypeScriptCompile Include="include\typings\threejs\three.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\components\directives\terraincanvas\" />
     <Folder Include="app\components\services\" />
   </ItemGroup>
   <PropertyGroup>
