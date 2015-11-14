@@ -1,7 +1,6 @@
 {
     "views": [
-        {"name": "WebGL Canvas", "url": "app/views/webgl.html"},
-		{"name": "Terrain",      "url": "app/views/terrain.html"},
-		{"name": "Globe",        "url": "app/views/globe.html"}
+		{"name": "Globe",        "url": "app/views/globe.html"},
+		{"name": "Vector Field", "url": "app/views/vectorfield.html"}
     ]
 }

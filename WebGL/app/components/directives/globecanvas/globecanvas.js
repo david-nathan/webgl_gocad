@@ -53,7 +53,8 @@ angular.module("webglApp")
             //addStatsObject();
             // add the output of the renderer to the html element
             //document.body.appendChild(renderer.domElement);
-            d3.select(element[0]).node().appendChild(renderer.domElement);
+            var root = d3.select(element[0])[0][0];
+            root.appendChild(renderer.domElement);
             // call the render function, after the first render, interval is determined
             // by requestAnimationFrame
             render();

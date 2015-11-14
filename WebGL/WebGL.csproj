@@ -61,13 +61,11 @@
   <ItemGroup>
     <Content Include="app.js" />
     <Content Include="app\components\directives\globecanvas\globecanvas_template.html" />
-    <Content Include="app\components\directives\terraincanvas\terraincanvas_template.html" />
-    <Content Include="app\components\directives\webglcanvas\webglcanvas_template.html" />
+    <Content Include="app\components\directives\vectorfieldcanvas\vectorfieldcanvas_template.html" />
     <Content Include="app\css\app.css" />
     <Content Include="app\views\globe.html" />
     <Content Include="app\views\home.html" />
-    <Content Include="app\views\terrain.html" />
-    <Content Include="app\views\webgl.html" />
+    <Content Include="app\views\vectorfield.html" />
     <Content Include="assets\textures\earthmap4k.jpg" />
     <Content Include="assets\textures\fair_clouds_4k.png" />
     <Content Include="data\tas_dev_gran.xml" />
@@ -84,6 +82,7 @@
     <Content Include="include\bootstrap\js\bootstrap.min.js" />
     <Content Include="include\bootstrap\js\npm.js" />
     <Content Include="include\chroma\chroma.min.js" />
+    <Content Include="include\d3\d3.min.js" />
     <Content Include="include\d3\d3.v3.js" />
     <Content Include="data\tas_dev_gran.gp" />
     <Content Include="data\tas_seis_interp.gp" />
@@ -120,11 +119,9 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="app\components\directives\globecanvas\globecanvas.ts" />
-    <TypeScriptCompile Include="app\components\directives\terraincanvas\terraincanvas.ts" />
-    <TypeScriptCompile Include="app\components\directives\webglcanvas\webglcanvas.ts" />
-    <TypeScriptCompile Include="app\controllers\canvasCtrl.ts" />
+    <TypeScriptCompile Include="app\components\directives\vectorfieldcanvas\vectorfieldcanvas.ts" />
     <TypeScriptCompile Include="app\controllers\globeCtrl.ts" />
-    <TypeScriptCompile Include="app\controllers\terrainCtrl.ts" />
+    <TypeScriptCompile Include="app\controllers\vectorfieldCtrl.ts" />
     <TypeScriptCompile Include="app\controllers\webglApp.ts" />
     <TypeScriptCompile Include="app\_references.ts" />
     <TypeScriptCompile Include="include\typings\angular-ui-bootstrap\angular-ui-bootstrap.d.ts" />
@@ -138,6 +135,7 @@
     <TypeScriptCompile Include="include\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="include\typings\chroma\chroma-js.d.ts" />
     <TypeScriptCompile Include="include\typings\d3\d3.d.ts" />
+    <TypeScriptCompile Include="include\typings\d3\plugins\d3.superformula-tests.ts" />
     <TypeScriptCompile Include="include\typings\d3\plugins\d3.superformula.d.ts" />
     <TypeScriptCompile Include="include\typings\datgui\dat-gui.d.ts" />
     <TypeScriptCompile Include="include\typings\jquery\jquery.d.ts" />
