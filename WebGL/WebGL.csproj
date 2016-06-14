@@ -70,9 +70,6 @@
     <Content Include="app\views\webgl.html" />
     <Content Include="assets\textures\earthmap4k.jpg" />
     <Content Include="assets\textures\fair_clouds_4k.png" />
-    <Content Include="data\tas_dev_gran.xml" />
-    <Content Include="data\tas_seis_interp.xml" />
-    <Content Include="data\tas_structures.xml" />
     <Content Include="include\angularjs\angular.js" />
     <Content Include="include\angularjs\angular.min.js" />
     <Content Include="include\bootstrap\css\bootstrap-theme.css" />
@@ -85,9 +82,7 @@
     <Content Include="include\bootstrap\js\npm.js" />
     <Content Include="include\chroma\chroma.min.js" />
     <Content Include="include\d3\d3.v3.js" />
-    <Content Include="data\tas_dev_gran.gp" />
-    <Content Include="data\tas_seis_interp.gp" />
-    <Content Include="data\tas_structures.gp" />
+    <Content Include="data\sample_data.gslib" />
     <None Include="include\jquery\jquery-2.1.1-vsdoc.js" />
     <None Include="include\jquery\jquery-2.1.1.intellisense.js" />
     <Content Include="include\jquery\jquery-2.1.1.js" />
