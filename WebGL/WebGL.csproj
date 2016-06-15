@@ -61,12 +61,12 @@
   <ItemGroup>
     <Content Include="app.js" />
     <Content Include="app\components\directives\globecanvas\globecanvas_template.html" />
-    <Content Include="app\components\directives\terraincanvas\terraincanvas_template.html" />
+    <Content Include="app\components\directives\tsurfcanvas\tsurfcanvas_template.html" />
     <Content Include="app\components\directives\webglcanvas\webglcanvas_template.html" />
     <Content Include="app\css\app.css" />
     <Content Include="app\views\globe.html" />
     <Content Include="app\views\home.html" />
-    <Content Include="app\views\terrain.html" />
+    <Content Include="app\views\tsurf.html" />
     <Content Include="app\views\webgl.html" />
     <Content Include="assets\textures\earthmap4k.jpg" />
     <Content Include="assets\textures\fair_clouds_4k.png" />
@@ -115,13 +115,14 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="app\components\directives\globecanvas\globecanvas.ts" />
-    <TypeScriptCompile Include="app\components\directives\terraincanvas\terraincanvas.ts" />
+    <TypeScriptCompile Include="app\components\directives\tsurfcanvas\tsurfcanvas.ts" />
     <TypeScriptCompile Include="app\components\directives\webglcanvas\webglcanvas.ts" />
     <TypeScriptCompile Include="app\controllers\canvasCtrl.ts" />
     <TypeScriptCompile Include="app\controllers\globeCtrl.ts" />
-    <TypeScriptCompile Include="app\controllers\terrainCtrl.ts" />
+    <TypeScriptCompile Include="app\controllers\tsurfCtrl.ts" />
     <TypeScriptCompile Include="app\controllers\webglApp.ts" />
     <TypeScriptCompile Include="app\_references.ts" />
+    <None Include="data\massive_sulphide.tsurf" />
     <TypeScriptCompile Include="include\typings\angular-ui-bootstrap\angular-ui-bootstrap.d.ts" />
     <TypeScriptCompile Include="include\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="include\typings\angularjs\angular-cookies.d.ts" />

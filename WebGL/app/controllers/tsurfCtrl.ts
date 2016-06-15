@@ -1,7 +1,7 @@
 ﻿///<reference path="../_references.ts" />
 
 angular.module("webglApp")
-    .controller("terrainCtrl", ["$scope", function ($scope) {
+    .controller("tsurfCtrl", ["$scope", function ($scope) {
 
 
     }]); 
